@@ -26,21 +26,232 @@ public class LoginForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanelOverview = new javax.swing.JPanel();
+        jPanelDangNhap = new javax.swing.JPanel();
+        jLabelLogo = new javax.swing.JLabel();
+        jLabelDangNhap = new javax.swing.JLabel();
+        jpannel1 = new login.Jpannel();
+        jTextFieldUsername = new javax.swing.JTextField();
+        jLabelUsername = new javax.swing.JLabel();
+        jpannel2 = new login.Jpannel();
+        jLabelPassword = new javax.swing.JLabel();
+        jTextFieldPassword = new javax.swing.JTextField();
+        myBTN1 = new login.MyBTN();
+        jButton1 = new javax.swing.JButton();
+        jPanelPoster = new javax.swing.JPanel();
+        jLabelPoster = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanelOverview.setBackground(new java.awt.Color(159, 189, 226));
+
+        jPanelDangNhap.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabelLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login/logo/login_logo.png"))); // NOI18N
+
+        jLabelDangNhap.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabelDangNhap.setForeground(new java.awt.Color(134, 172, 218));
+        jLabelDangNhap.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelDangNhap.setText("Đăng nhập");
+
+        jpannel1.setBackground(new java.awt.Color(243, 243, 244));
+        jpannel1.setForeground(new java.awt.Color(255, 204, 204));
+        jpannel1.setRoundBottomLeft(40);
+        jpannel1.setRoundBottomRight(40);
+        jpannel1.setRoundTopLeft(40);
+        jpannel1.setRoundTopRight(40);
+
+        jTextFieldUsername.setBackground(new java.awt.Color(243, 243, 244));
+        jTextFieldUsername.setForeground(new java.awt.Color(162, 188, 224));
+        jTextFieldUsername.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jTextFieldUsername.setText("Username");
+        jTextFieldUsername.setBorder(null);
+
+        jLabelUsername.setBackground(new java.awt.Color(243, 243, 244));
+        jLabelUsername.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelUsername.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login/logo/username.png"))); // NOI18N
+
+        javax.swing.GroupLayout jpannel1Layout = new javax.swing.GroupLayout(jpannel1);
+        jpannel1.setLayout(jpannel1Layout);
+        jpannel1Layout.setHorizontalGroup(
+            jpannel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpannel1Layout.createSequentialGroup()
+                .addGap(13, 13, 13)
+                .addComponent(jLabelUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+                .addGap(45, 45, 45))
+        );
+        jpannel1Layout.setVerticalGroup(
+            jpannel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jTextFieldUsername)
+            .addComponent(jLabelUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+        );
+
+        jpannel2.setBackground(new java.awt.Color(243, 243, 244));
+        jpannel2.setForeground(new java.awt.Color(255, 204, 204));
+        jpannel2.setRoundBottomLeft(40);
+        jpannel2.setRoundBottomRight(40);
+        jpannel2.setRoundTopLeft(40);
+        jpannel2.setRoundTopRight(40);
+
+        jLabelPassword.setBackground(new java.awt.Color(243, 243, 244));
+        jLabelPassword.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelPassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login/logo/password.png"))); // NOI18N
+
+        jTextFieldPassword.setBackground(new java.awt.Color(243, 243, 244));
+        jTextFieldPassword.setForeground(new java.awt.Color(162, 188, 224));
+        jTextFieldPassword.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        jTextFieldPassword.setText("Password");
+        jTextFieldPassword.setBorder(null);
+        jTextFieldPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldPasswordActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jpannel2Layout = new javax.swing.GroupLayout(jpannel2);
+        jpannel2.setLayout(jpannel2Layout);
+        jpannel2Layout.setHorizontalGroup(
+            jpannel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpannel2Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(jLabelPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 29, Short.MAX_VALUE))
+        );
+        jpannel2Layout.setVerticalGroup(
+            jpannel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpannel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addComponent(jTextFieldPassword)
+        );
+
+        myBTN1.setBackground(new java.awt.Color(251, 233, 189));
+        myBTN1.setForeground(new java.awt.Color(153, 180, 214));
+        myBTN1.setText("Đăng nhập");
+        myBTN1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        myBTN1.setMargin(new java.awt.Insets(2, 14, 6, 14));
+        myBTN1.setRadius(45);
+        myBTN1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                myBTN1MouseClicked(evt);
+            }
+        });
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login/logo/cancel.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelDangNhapLayout = new javax.swing.GroupLayout(jPanelDangNhap);
+        jPanelDangNhap.setLayout(jPanelDangNhapLayout);
+        jPanelDangNhapLayout.setHorizontalGroup(
+            jPanelDangNhapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelDangNhapLayout.createSequentialGroup()
+                .addGroup(jPanelDangNhapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelDangNhapLayout.createSequentialGroup()
+                        .addGap(138, 138, 138)
+                        .addComponent(jLabelDangNhap, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelDangNhapLayout.createSequentialGroup()
+                        .addGap(66, 66, 66)
+                        .addGroup(jPanelDangNhapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jpannel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jpannel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanelDangNhapLayout.createSequentialGroup()
+                        .addGap(120, 120, 120)
+                        .addComponent(myBTN1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelDangNhapLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jButton1)))
+                .addContainerGap(65, Short.MAX_VALUE))
+        );
+        jPanelDangNhapLayout.setVerticalGroup(
+            jPanelDangNhapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelDangNhapLayout.createSequentialGroup()
+                .addGap(11, 11, 11)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabelLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabelDangNhap, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(jpannel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jpannel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61)
+                .addComponent(myBTN1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelPoster.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabelPoster.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelPoster.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login/logo/login_poster.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelPosterLayout = new javax.swing.GroupLayout(jPanelPoster);
+        jPanelPoster.setLayout(jPanelPosterLayout);
+        jPanelPosterLayout.setHorizontalGroup(
+            jPanelPosterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabelPoster, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE)
+        );
+        jPanelPosterLayout.setVerticalGroup(
+            jPanelPosterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabelPoster, javax.swing.GroupLayout.DEFAULT_SIZE, 488, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanelOverviewLayout = new javax.swing.GroupLayout(jPanelOverview);
+        jPanelOverview.setLayout(jPanelOverviewLayout);
+        jPanelOverviewLayout.setHorizontalGroup(
+            jPanelOverviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelOverviewLayout.createSequentialGroup()
+                .addComponent(jPanelDangNhap, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanelPoster, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelOverviewLayout.setVerticalGroup(
+            jPanelOverviewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanelPoster, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanelDangNhap, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanelOverview, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanelOverview, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextFieldPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldPasswordActionPerformed
+
+    private void myBTN1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_myBTN1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_myBTN1MouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -78,5 +289,19 @@ public class LoginForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabelDangNhap;
+    private javax.swing.JLabel jLabelLogo;
+    private javax.swing.JLabel jLabelPassword;
+    private javax.swing.JLabel jLabelPoster;
+    private javax.swing.JLabel jLabelUsername;
+    private javax.swing.JPanel jPanelDangNhap;
+    private javax.swing.JPanel jPanelOverview;
+    private javax.swing.JPanel jPanelPoster;
+    private javax.swing.JTextField jTextFieldPassword;
+    private javax.swing.JTextField jTextFieldUsername;
+    private login.Jpannel jpannel1;
+    private login.Jpannel jpannel2;
+    private login.MyBTN myBTN1;
     // End of variables declaration//GEN-END:variables
 }
