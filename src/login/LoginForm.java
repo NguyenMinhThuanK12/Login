@@ -4,6 +4,10 @@
  */
 package login;
 
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.JTextField;
+
 /**
  *
  * @author ASUS
@@ -15,8 +19,19 @@ public class LoginForm extends javax.swing.JFrame {
      */
     public LoginForm() {
         initComponents();
+          addPlaceholderStyle(jTextFieldUsername,"Username");
+        addPlaceholderStyle(jTextFieldPassword,"Password");
+    }
+    private void addPlaceholderStyle(JTextField textField,String name) {
+        Font customFont = new Font("Tahoma", Font.BOLD, 14);
+        textField.setFont(customFont);
+        textField.setForeground(new Color(157,185,223));
+        textField.setText(name);
     }
 
+    public void removePlaceholderStyle(JTextField textFiled) {        
+        textFiled.setForeground(Color.black);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -42,6 +57,23 @@ public class LoginForm extends javax.swing.JFrame {
         jLabelPoster = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowFocusListener(new java.awt.event.WindowFocusListener() {
+            public void windowGainedFocus(java.awt.event.WindowEvent evt) {
+                formWindowGainedFocus(evt);
+            }
+            public void windowLostFocus(java.awt.event.WindowEvent evt) {
+            }
+        });
+        addWindowStateListener(new java.awt.event.WindowStateListener() {
+            public void windowStateChanged(java.awt.event.WindowEvent evt) {
+                formWindowStateChanged(evt);
+            }
+        });
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowActivated(java.awt.event.WindowEvent evt) {
+                formWindowActivated(evt);
+            }
+        });
 
         jPanelOverview.setBackground(new java.awt.Color(159, 189, 226));
 
@@ -67,6 +99,14 @@ public class LoginForm extends javax.swing.JFrame {
         jTextFieldUsername.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextFieldUsername.setText("Username");
         jTextFieldUsername.setBorder(null);
+        jTextFieldUsername.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jTextFieldUsernameFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextFieldUsernameFocusLost(evt);
+            }
+        });
 
         jLabelUsername.setBackground(new java.awt.Color(243, 243, 244));
         jLabelUsername.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -105,6 +145,14 @@ public class LoginForm extends javax.swing.JFrame {
         jTextFieldPassword.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         jTextFieldPassword.setText("Password");
         jTextFieldPassword.setBorder(null);
+        jTextFieldPassword.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jTextFieldPasswordFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jTextFieldPasswordFocusLost(evt);
+            }
+        });
         jTextFieldPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldPasswordActionPerformed(evt);
@@ -175,7 +223,7 @@ public class LoginForm extends javax.swing.JFrame {
                     .addGroup(jPanelDangNhapLayout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addComponent(jButton1)))
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
         jPanelDangNhapLayout.setVerticalGroup(
             jPanelDangNhapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -252,6 +300,49 @@ public class LoginForm extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jTextFieldUsernameFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldUsernameFocusGained
+        // TODO add your handling code here:
+               if ( jTextFieldUsername.getText().equals("Username")) {
+             jTextFieldUsername.setText("");
+             jTextFieldUsername.requestFocus();
+            removePlaceholderStyle( jTextFieldUsername);
+        }
+    }//GEN-LAST:event_jTextFieldUsernameFocusGained
+
+    private void jTextFieldUsernameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldUsernameFocusLost
+    if ( jTextFieldUsername.getText().equals("")) {
+            addPlaceholderStyle( jTextFieldUsername,"Username");
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldUsernameFocusLost
+
+    private void jTextFieldPasswordFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldPasswordFocusGained
+        // TODO add your handling code here:
+                 if ( jTextFieldPassword.getText().equals("Password")) {
+              jTextFieldPassword.setText("");
+            jTextFieldPassword.requestFocus();
+            removePlaceholderStyle(  jTextFieldPassword);
+        }
+    }//GEN-LAST:event_jTextFieldPasswordFocusGained
+
+    private void jTextFieldPasswordFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextFieldPasswordFocusLost
+        // TODO add your handling code here:
+        if ( jTextFieldPassword.getText().equals("")) {
+            addPlaceholderStyle( jTextFieldPassword,"Password");
+        }     
+    }//GEN-LAST:event_jTextFieldPasswordFocusLost
+
+    private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowGainedFocus
+
+    private void formWindowStateChanged(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowStateChanged
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        // TODO add your handling code here:
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
